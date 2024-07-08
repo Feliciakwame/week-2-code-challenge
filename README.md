@@ -31,3 +31,28 @@ Requirements:
     Students will practice iterating through an array to access and manipulate list items.
     They will gain experience dynamically modifying the DOM based on user interaction.
     The challenge reinforces understanding of event listeners and their use in creating interactive applications.
+
+## System Requirements
+
+- Node 18+
+- A browser capable of running javascript e.g safari,firefox and chrome
+- A text editor capable of running javascript e.g Visual Studio Code
+- RAM storage >8GB
+- Disc space >1GB
+
+## Installation
+
+- Open your local terminal
+- Clone the repository from git using:  
+   git clone (SSH KEY)
+- Change directory to your file by using the 'cd' command
+- Open your file using the 'code(space).' command
+
+# Code
+
+- Create a html file for the webpage structure
+- Create a JavaScript file for the webpage functionality
+- Create a CSS style page
+- Link all the files to the html file using the link and script tag
+
+## HTML FILE STRUCTURE

@@ -16,31 +16,44 @@ const displayShoppingList = () => {
   shoppingList.forEach((item) => {
     const li = document.createElement("li");
     li.textContent = item;
+    const button = document.createElement("button");
+    button.textContent = "Mark as purchased";
     listContainer.appendChild(li);
+    li.appendChild(button);
+
+    button.addEventListener("click", () => {
+      li.style.textDecoration = "line-through";
+    });
+
+    const undoButton = document.createElement("button");
+    undoButton.textContent = "Undo";
+    li.appendChild(undoButton);
+    undoButton.addEventListener("click", () => {
+      li.style.textDecoration = "none";
+    });
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete Item";
+    li.appendChild(deleteButton);
+    deleteButton.addEventListener("click", () => {
+      li.remove();
+    });
   });
 };
 
 document.getElementById("addItemBtn").addEventListener("click", addItemToList);
 
-const deleteButton = document.createElement("button");
-deleteButton.textContent = "Delete Items";
-const shoppingListContainer = document.getElementById("shoppingList");
-deleteButton.addEventListener("click", function () {
-  shoppingList = [];
-  displayShoppingList();
-});
-shoppingListContainer.parentNode.appendChild(deleteButton);
+// Create and append the Delete Items button
 
-function createMarkedPurchaseButton() {
-  const markedPurchaseButton = document.createElement("button");
-  markedPurchaseButton.textContent = "Marked Purchase";
-  markedPurchaseButton.addEventListener("click", function () {
-    const items = Array.from(shoppingListContainer.children);
-    items.forEach((item) => {
-      item.classList.add("purchased");
-    });
+// Create and append the Marked Purchase button
+const markAsPurchased = document.createElement("button");
+markAsPurchased.textContent = "Item Purchased";
+markAsPurchased.addEventListener("click", function () {
+  const listContainer = document.getElementById("shoppingList");
+  const items = Array.from(listContainer.children);
+  items.forEach((item) => {
+    item.classList.add("purchased");
   });
-  shoppingListContainer.parentNode.appendChild(markedPurchaseButton);
-}
+});
+document.li.appendChild(markAsPurchased);
 
-createMarkedPurchaseButton();
+console.log(li);
