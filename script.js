@@ -12,7 +12,10 @@ const addItemToList = () => {
 
 const displayShoppingList = () => {
   const listContainer = document.getElementById("shoppingList");
-  listContainer.innerHTML = "";
+  const clearButton = document.getElementById("clearButton");
+  clearButton.addEventListener("click", () => {
+    listContainer.innerHTML = "";
+  });
   shoppingList.forEach((item) => {
     const li = document.createElement("li");
     li.textContent = item;
